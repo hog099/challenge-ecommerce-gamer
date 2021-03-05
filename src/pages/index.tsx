@@ -4,6 +4,7 @@ import { GetServerSideProps } from 'next'
 import { ThemeContext } from '../contexts/ThemeContext'
 import styles from '../styles/pages/Home.module.css'
 
+import Header from '../components/Header';
 import Button from '../components/Button';
 
 interface HomeProps {
@@ -16,11 +17,12 @@ export default function Home(props: HomeProps) {
 
 
   return (
-    <div className={theme === 'light-mode' ? styles.lightMode : styles.darkMode}>
+    <div className={theme != 'light-mode' ? styles.lightMode : styles.darkMode}>
       <div className={styles.container}>
+        <Header />
         {/* O Head é do Next para personalizarmos o titulo da aplicação na aba do navegador, podendo assim em cada pagina termos um titulo diferente */}
         <Head>
-          <title>Hello Nextjs</title>
+          <title>GameStore</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
@@ -28,7 +30,6 @@ export default function Home(props: HomeProps) {
           <h1 className={styles.title}>
             Hello Nextjs!
         </h1>
-        <Button />
 
         </main>
 
