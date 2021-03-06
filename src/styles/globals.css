@@ -17,7 +17,8 @@
 :root {
   --white: #fff;
   --light-background: #f2f3f5;
-  --dark-background: #0D1117;
+  /* --dark-background: #0D1117; */
+  --dark-background: #323842;
   --gray-line: #dcdde0;
   --text: #666;
   --text-highlight: #b3b9ff;
