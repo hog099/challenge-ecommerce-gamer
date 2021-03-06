@@ -16,13 +16,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <br />
-        <br />
         <h3 className={styles.title}>
           A SUA LOJA DE GAMES PREFERIDA
         </h3>
-        <br />
-        <br />
 
         <Catalogo />
 
