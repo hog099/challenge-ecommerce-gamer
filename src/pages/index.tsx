@@ -16,7 +16,7 @@ export default function App(props: AppProps) {
   
 
   return (
-    <div className={theme != 'light-mode' ? styles.lightMode : styles.darkMode}>
+    <div className={styles.lightMode}>
      <Home props={props}/>
     </div>
   )
