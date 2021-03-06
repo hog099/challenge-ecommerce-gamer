@@ -13,6 +13,7 @@ interface AppProps {
 
 export default function App(props: AppProps) {
   const { theme } = React.useContext(ThemeContext)
+  
 
   return (
     <div className={theme != 'light-mode' ? styles.lightMode : styles.darkMode}>

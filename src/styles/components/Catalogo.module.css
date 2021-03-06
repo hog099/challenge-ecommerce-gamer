@@ -1,33 +1,135 @@
 .container {
-    width: 100vw;
-    height: 90vw;
-    display: flex;
-    padding: 0 5rem 0 5rem;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 0 2rem;
 }
-.containerleft {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    padding: 0 0 0 3rem;
+
+.containerfilter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0.7rem;
 }
-.containerright {
+
+.contenttitlefilters{
+    width: 15%;
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
-    width: 80%;
-    padding: 0 3rem 0 0;
 }
 
+.titlefilters {
+    font-size: 1rem;
+    color: var(--text);
+}
 
+.contentfilters {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
 
+.buttonfilter {
+  width: 8rem;
+  height: 25px;
+  outline: none;
+  border: none;
+  margin: 0 1rem 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  background-color: transparent;
+}
+
+.buttonfilteractive{
+    font-weight: bold;
+    border-bottom: solid;
+    border-bottom-color: var(--blue);
+    border-bottom-width: 2px;
+}
+
+.filtericon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.containerbody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15rem;
+  height: 18rem;
+  margin: 0.6rem;
+  padding: 0.2rem;
+  border-radius: 2px;
+  background-color: var(--white);
+  box-shadow: 3px 3px 18px -2px rgba(0, 0, 0, 0.26);
+}
+
+.contentimage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 12rem;
+}
+
+.imagecard {
+  height: 12rem;
+}
+
+.contentdescription {
+  width: 100%;
+  height: 6rem;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.subtitle {
+  font-size: 0.7rem;
+  color: var(--text);
+}
+.price {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.spanbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.buttonbuy {
+  width: 100%;
+  height: 25px;
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--white);
+  background: var(--green);
+}
 
 .lightMode {
-    background: var(--light-background);
-   }
-   
-   .darkMode {
-     background: var(--dark-background);
-   }
+  background: var(--light-background);
+}
+
+.darkMode {
+  background: var(--dark-background);
+}
