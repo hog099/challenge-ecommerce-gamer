@@ -1,0 +1,33 @@
+.container {
+    width: 100vw;
+    height: 90vw;
+    display: flex;
+    padding: 0 5rem 0 5rem;
+}
+.containerleft {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 0 0 0 3rem;
+}
+.containerright {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    padding: 0 3rem 0 0;
+}
+
+
+
+
+.lightMode {
+    background: var(--light-background);
+   }
+   
+   .darkMode {
+     background: var(--dark-background);
+   }

@@ -32,6 +32,12 @@
     width: 80px;
     height: 80px;
 }
+.iconcart {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--text);
+    cursor: pointer;
+}
 
 
 @media (max-width: 400px){
@@ -51,10 +57,18 @@
 }
 
 
-.lightMode {
-    color: var(--light-background);
+.textlightMode {
+    color: var(--text) !important;
 }
-   
+
+.textdarkMode {
+    color: var(--white) !important;
+}
+
+.lightMode {
+    background-color: var(--dark-background);
+}
+
 .darkMode {
-    color: var(--text);
+    background-color: var(--light-background);
 }

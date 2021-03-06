@@ -4,36 +4,19 @@ import { GetServerSideProps } from 'next'
 import { ThemeContext } from '../contexts/ThemeContext'
 import styles from '../styles/pages/Home.module.css'
 
-import Header from '../components/Header';
-import Button from '../components/Button';
+import Home from './home/index';
 
-interface HomeProps {
+interface AppProps {
   theme: 'light-mode' | 'dark-mode';
   checked: boolean;
 }
 
-export default function Home(props: HomeProps) {
+export default function App(props: AppProps) {
   const { theme } = React.useContext(ThemeContext)
-
 
   return (
     <div className={theme != 'light-mode' ? styles.lightMode : styles.darkMode}>
-      <div className={styles.container}>
-        <Header />
-        {/* O Head é do Next para personalizarmos o titulo da aplicação na aba do navegador, podendo assim em cada pagina termos um titulo diferente */}
-        <Head>
-          <title>GameStore</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <main className={styles.main}>
-          <h1 className={styles.title}>
-            Hello Nextjs!
-        </h1>
-
-        </main>
-
-      </div>
+     <Home props={props}/>
     </div>
   )
 }
