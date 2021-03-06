@@ -17,7 +17,7 @@ export default function App(props: AppProps) {
 
   return (
     <div className={styles.lightMode}>
-     <Home props={props}/>
+     <Home />
     </div>
   )
 }

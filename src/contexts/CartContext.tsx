@@ -3,17 +3,17 @@ import Cookies from 'js-cookie';
 import lodash from 'lodash';
 
 interface CartContextData {
-  items: Array;
+  items: any;
   subtotal: number;
   shipping: number;
   total: number;
-  handleAddItem: () => void;
-  handleRemoveItem: () => void;
+  handleAddItem: (any) => void;
+  handleRemoveItem: (any) => void;
 }
 
 interface CartProviderProps {
   children: React.ReactNode;
-  items: Array;
+  items: any;
   subtotal: number;
   shipping: number;
   total: number;
@@ -28,7 +28,7 @@ export function CartProvider({ children, ...rest }: CartProviderProps) {
   const [items, setitems] = React.useState(rest.items ?? [])
 
 
-  const handleAddItem = (item) => {
+  const handleAddItem = (item:any) => {
     let itemsactuals = items;
     itemsactuals.push(item);
 
@@ -48,7 +48,7 @@ export function CartProvider({ children, ...rest }: CartProviderProps) {
   }
 
 
-  const handleRemoveItem = (item) => {
+  const handleRemoveItem = (item:any) => {
 
     let newitems = lodash.filter(items, i => i.id != item.id)
 
