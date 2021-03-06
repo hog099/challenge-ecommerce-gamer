@@ -3,6 +3,7 @@ import React from 'react';
 import clsx from 'clsx'
 import lodash from 'lodash'
 import { ThemeContext } from '../contexts/ThemeContext'
+import { CartContext } from '../contexts/CartContext'
 
 import styles from '../styles/components/Catalogo.module.css';
 
@@ -12,6 +13,7 @@ import dataprodutos from '../db/products.json';
 
 const Catalogo: React.FC = () => {
   const { theme } = React.useContext(ThemeContext);
+  const { handleAddItem, items, subtotal } = React.useContext(CartContext);
 
   const [ismounted, setismounted] = React.useState(false);
   const [listproducts, setlistproducts] = React.useState(null);
@@ -24,6 +26,13 @@ const Catalogo: React.FC = () => {
     }
 
   }, [ismounted]);
+
+
+  React.useEffect(() => {
+    console.log('Items do carrinho subtotal', subtotal);
+    console.log('Items do carrinho', items);
+
+  }, [items]);
 
 
   const handleSort = (index: number) => {
@@ -54,7 +63,7 @@ const Catalogo: React.FC = () => {
 
 
   return (
-    <div className={clsx(styles.container, theme != 'light-mode' ? styles.lightMode : styles.darkMode)}>
+    <div className={clsx(styles.container, styles.lightMode)}>
 
       <div className={styles.containerfilter}>
 
@@ -96,7 +105,7 @@ const Catalogo: React.FC = () => {
                 <p className={styles.price}>Preço R${item.price}</p>
 
                 <span className={styles.spanbutton}>
-                  <button className={styles.buttonbuy}>Comprar</button>
+                  <button onClick={() => handleAddItem(item)} className={styles.buttonbuy}>Comprar</button>
                 </span>
               </div>
             </div>

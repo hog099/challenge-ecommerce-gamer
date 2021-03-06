@@ -27,6 +27,7 @@
 
 .title {
     font-family: 'Play';
+    cursor: pointer;
 }
 .logo {
     width: 80px;
@@ -38,6 +39,23 @@
     color: var(--text);
     cursor: pointer;
 }
+
+
+.badgecart{
+    display: flex;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--blue-twitter);
+    border-radius: 15px;
+    margin: 0 0.2rem 0 0.2rem;
+}
+
+.textbadge{
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
 
 
 @media (max-width: 400px){
