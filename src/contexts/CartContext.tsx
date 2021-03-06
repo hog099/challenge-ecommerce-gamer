@@ -56,7 +56,6 @@ export function CartProvider({ children, ...rest }: CartProviderProps) {
     let shippingvalue;
     if (shipping == 0) {
       shippingvalue = newitems.length * 10;
-      console.log('newitems.length * 10', newitems.length * 10);
       
     } else {
       if (subtotalcart > 250) {
