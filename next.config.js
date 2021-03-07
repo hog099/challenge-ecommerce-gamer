@@ -13,8 +13,8 @@ module.exports = withCSS({
   trailingSlash: true,
   // Use the CDN in production and localhost for development.
   // assetPrefix: process.env.APP_ENV,
-  assetPrefix: 'http://127.0.0.1/challenger01/',
-  // assetPrefix: 'http://127.0.0.1:3000',
+  assetPrefix: 'https://hog099.github.io/challenge-ecommerce-gamer',
+  // assetPrefix: 'http://127.0.0.1/challenger01/',
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
   },
