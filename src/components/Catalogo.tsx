@@ -28,11 +28,11 @@ const Catalogo: React.FC = () => {
   }, [ismounted]);
 
 
-  React.useEffect(() => {
-    console.log('Items do carrinho subtotal', subtotal);
-    console.log('Items do carrinho', items);
+  // React.useEffect(() => {
+  //   console.log('Items do carrinho subtotal', subtotal);
+  //   console.log('Items do carrinho', items);
 
-  }, [items]);
+  // }, [items]);
 
 
   const handleSort = (index: number) => {
