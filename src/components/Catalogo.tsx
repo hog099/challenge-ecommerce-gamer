@@ -73,17 +73,17 @@ const Catalogo: React.FC = () => {
         <div className={styles.contentfilters}>
           <button onClick={() => handleSort(0)} className={clsx(styles.buttonfilter, indexfilter === 0 && styles.buttonfilteractive)}
           >
-            <img src={`${process.env.APP_ENV}assets/filter-icon.svg`} className={styles.filtericon} />
+            <img src={`${process.env.APP_ENV}/assets/filter-icon.svg`} className={styles.filtericon} />
             Nome
             </button>
           <button onClick={() => handleSort(1)} className={clsx(styles.buttonfilter, indexfilter === 1 && styles.buttonfilteractive)}
           >
-            <img src={`${process.env.APP_ENV}assets/filter-icon.svg`} className={styles.filtericon} />
+            <img src={`${process.env.APP_ENV}/assets/filter-icon.svg`} className={styles.filtericon} />
             Popularidade
             </button>
           <button onClick={() => handleSort(2)} className={clsx(styles.buttonfilter, indexfilter === 2 && styles.buttonfilteractive)}
           >
-            <img src={`${process.env.APP_ENV}assets/filter-icon.svg`} className={styles.filtericon} />
+            <img src={`${process.env.APP_ENV}/assets/filter-icon.svg`} className={styles.filtericon} />
             Preço
             </button>
         </div>
@@ -97,7 +97,7 @@ const Catalogo: React.FC = () => {
           return (
             <div key={index} className={styles.card}>
               <div className={styles.contentimage}>
-                <img src={`${process.env.APP_ENV}assets/${item.image}`} className={styles.imagecard} />
+                <img src={`${process.env.APP_ENV}/assets/${item.image}`} className={styles.imagecard} />
               </div>
               <div className={styles.contentdescription}>
                 <p className={styles.title}>{item.name}</p>
