@@ -45,7 +45,7 @@ export default function Cart() {
                 return (
                   <div key={index} className={styles.contentitemcart} >
                     <div className={styles.contentitemimgcart}>
-                      <img src={`assets/${item.image}`} className={styles.imgitemcart} />
+                      <img src={`/assets/${item.image}`} className={styles.imgitemcart} />
                     </div>
                     <div className={styles.contentitemcontent}>
                       <p className={styles.titleitemcart}>{item.name}</p>

@@ -13,14 +13,14 @@ const Header: React.FC = () => {
   return (
     <div className={clsx(styles.container, styles.lightMode)}>
       <div className={styles.containerleft}>
-        <img src="logo.svg" className={styles.logo} />
+        <img src="/logo.svg" className={styles.logo} />
         <Link href="/">
           <h3 className={clsx(styles.title,styles.textdarkMode)}>GameStore</h3>
         </Link>
       </div>
       <div className={styles.containerright}>
         <Link href="/cart">
-          <img src="assets/cart-icon.svg" className={styles.iconcart} />
+          <img src="/assets/cart-icon.svg" className={styles.iconcart} />
         </Link>
 
         {items.length > 0 &&
