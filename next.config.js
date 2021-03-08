@@ -1,9 +1,16 @@
 const path = require('path');
+require('dotenv').config()  
 const withSass = require("@zeit/next-sass");
 const withLess = require("@zeit/next-less");
 const withCSS = require("@zeit/next-css");
 
 const isProd = process.env.NODE_ENV === "production";
+
+// fix: prevents error when .less files are required by node
+if (typeof require !== "undefined") {
+  require.extensions[".less"] = (file) => {};
+}
+
 
 module.exports = withCSS({
   env: {
@@ -12,8 +19,8 @@ module.exports = withCSS({
   },
   trailingSlash: true,
   // Use the CDN in production and localhost for development.
-  // assetPrefix: process.env.APP_ENV,
-  assetPrefix: 'https://hog099.github.io/challenge-ecommerce-gamer',
+  assetPrefix: process.env.APP_ENV,
+  // assetPrefix: 'https://hog099.github.io/challenge-ecommerce-gamer',
   // assetPrefix: 'http://127.0.0.1/challenger01/',
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
